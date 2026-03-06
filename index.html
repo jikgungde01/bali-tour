@@ -35,7 +35,6 @@ background:#020617;
 position:sticky;
 top:0;
 z-index:100;
-box-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
 .logo{
@@ -55,8 +54,7 @@ margin-left:35px;
 
 .menu a{
 text-decoration:none;
-color:#e2e8f0;
-font-weight:500;
+color:white;
 transition:0.3s;
 }
 
@@ -68,12 +66,11 @@ color:#38bdf8;
 
 .hero{
 position:relative;
-height:85vh;
+height:90vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-color:white;
 overflow:hidden;
 }
 
@@ -98,20 +95,21 @@ z-index:-1;
 }
 
 .hero h1{
-font-size:65px;
+font-size:60px;
+color:white;
 }
 
 .hero p{
-margin:15px 0 30px;
 font-size:20px;
+margin:15px 0;
 }
 
 .btn{
 background:#38bdf8;
 padding:14px 40px;
-color:white;
-text-decoration:none;
 border-radius:30px;
+text-decoration:none;
+color:white;
 }
 
 /* ABOUT */
@@ -134,8 +132,8 @@ flex:1;
 
 .about-text h2{
 font-size:36px;
-margin-bottom:20px;
 color:#38bdf8;
+margin-bottom:20px;
 }
 
 .about-img{
@@ -152,52 +150,42 @@ border-radius:15px;
 .container{
 padding:100px 80px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:35px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .card{
 background:#1e293b;
 border-radius:15px;
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
 }
 
 .card img{
 width:100%;
-height:210px;
+height:200px;
 object-fit:cover;
 }
 
 .card-body{
-padding:25px;
+padding:20px;
 }
 
 .card h2{
-font-size:20px;
-margin-bottom:10px;
 color:#38bdf8;
+margin-bottom:10px;
 }
 
 .card ul{
-margin-bottom:15px;
-padding-left:18px;
+padding-left:20px;
 font-size:14px;
-line-height:1.8;
+margin-bottom:10px;
 }
 
 .card h3{
-display:inline-block;
 background:#38bdf8;
-color:white;
-padding:6px 14px;
+display:inline-block;
+padding:5px 15px;
 border-radius:20px;
-font-size:14px;
 }
 
 /* TESTIMONIAL */
@@ -209,9 +197,8 @@ text-align:center;
 }
 
 .testimonial h2{
-font-size:36px;
-margin-bottom:50px;
 color:#38bdf8;
+margin-bottom:40px;
 }
 
 .testimonial-container{
@@ -228,19 +215,17 @@ border-radius:15px;
 
 .stars{
 color:gold;
-margin-bottom:10px;
 }
 
 /* BOOKING */
 
 .booking{
 padding:100px 20px;
-background:#020617;
 text-align:center;
 }
 
 .booking form{
-max-width:420px;
+max-width:400px;
 margin:auto;
 display:flex;
 flex-direction:column;
@@ -249,19 +234,19 @@ gap:15px;
 
 .booking input,
 .booking select{
-padding:13px;
-border-radius:8px;
+padding:12px;
 border:none;
+border-radius:8px;
 background:#1e293b;
 color:white;
 }
 
 .booking button{
 background:#25D366;
-color:white;
 padding:14px;
 border:none;
 border-radius:8px;
+color:white;
 cursor:pointer;
 }
 
@@ -269,21 +254,15 @@ cursor:pointer;
 
 .map{
 padding:100px 20px;
-background:#020617;
 text-align:center;
-}
-
-.map h2{
-font-size:36px;
-margin-bottom:40px;
-color:#38bdf8;
+background:#020617;
 }
 
 .map iframe{
 width:90%;
 height:450px;
-border-radius:15px;
 border:none;
+border-radius:15px;
 }
 
 /* CONTACT */
@@ -295,9 +274,8 @@ text-align:center;
 
 footer{
 background:#020617;
-color:white;
+padding:20px;
 text-align:center;
-padding:25px;
 }
 
 </style>
@@ -315,7 +293,7 @@ padding:25px;
 <li><a href="#about">About</a></li>
 <li><a href="#packages">Packages</a></li>
 <li><a href="#testimonial">Testimonials</a></li>
-<li><a href="#map">Destinations Map</a></li>
+<li><a href="#map">Map</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
@@ -324,7 +302,7 @@ padding:25px;
 <header class="hero" id="home">
 
 <video autoplay muted loop class="video-bg">
-<source src="video.mp4" type="video/mp4">
+<source src="bali.mp4" type="video/mp4">
 </video>
 
 <div class="hero-overlay"></div>
@@ -346,7 +324,8 @@ padding:25px;
 <h2>About BaliTrip</h2>
 
 <p>BaliTrip provides the best tour packages to explore Bali.</p>
-<p>Professional drivers, comfortable vehicles, and complete itineraries.</p>
+
+<p>Professional drivers, comfortable vehicles, and amazing destinations.</p>
 
 </div>
 
@@ -436,19 +415,19 @@ padding:25px;
 <div class="testi-card">
 <div class="stars">★★★★★</div>
 <p>Amazing trip and friendly driver!</p>
-<h4>— Sarah, Australia</h4>
+<h4>— Sarah</h4>
 </div>
 
 <div class="testi-card">
 <div class="stars">★★★★★</div>
 <p>Best Bali experience ever.</p>
-<h4>— Michael, USA</h4>
+<h4>— Michael</h4>
 </div>
 
 <div class="testi-card">
 <div class="stars">★★★★★</div>
 <p>Very recommended tour service.</p>
-<h4>— Rina, Indonesia</h4>
+<h4>— Rina</h4>
 </div>
 
 </div>
@@ -483,7 +462,7 @@ padding:25px;
 
 <h2>Bali Destinations Map</h2>
 
-<iframe src="https://www.google.com/maps?q=Bali,Indonesia&output=embed"></iframe>
+<iframe src="https://www.google.com/maps?q=Bali&output=embed"></iframe>
 
 </section>
 
@@ -491,9 +470,9 @@ padding:25px;
 
 <h2>Contact Us</h2>
 
-<p>📍 Bali, Indonesia</p>
-<p>📞 +62 877 6148 3450</p>
-<p>📧 balitrip@gmail.com</p>
+<p>Bali, Indonesia</p>
+<p>+62 877 6148 3450</p>
+<p>balitrip@gmail.com</p>
 
 </section>
 
