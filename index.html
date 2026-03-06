@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bali Day Trip</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:#e2e8f0;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:#020617;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+.logo{
+font-size:24px;
+font-weight:600;
+color:#38bdf8;
+}
+
+.menu{
+display:flex;
+list-style:none;
+}
+
+.menu li{
+margin-left:35px;
+}
+
+.menu a{
+text-decoration:none;
+color:#e2e8f0;
+font-weight:500;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:#38bdf8;
+}
+
+/* HERO VIDEO */
+
+.hero{
+position:relative;
+height:85vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+overflow:hidden;
+}
+
+.video-bg{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+z-index:-1;
+}
+
+.hero h1{
+font-size:65px;
+}
+
+.hero p{
+margin:15px 0 30px;
+font-size:20px;
+}
+
+.btn{
+background:#38bdf8;
+padding:14px 40px;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+
+/* ABOUT */
+
+.about{
+padding:100px 80px;
+background:#020617;
+}
+
+.about-container{
+display:flex;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.about-text{
+flex:1;
+}
+
+.about-text h2{
+font-size:36px;
+margin-bottom:20px;
+color:#38bdf8;
+}
+
+.about-img{
+flex:1;
+}
+
+.about-img img{
+width:100%;
+border-radius:15px;
+}
+
+/* PACKAGES */
+
+.container{
+padding:100px 80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:35px;
+}
+
+.card{
+background:#1e293b;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:210px;
+object-fit:cover;
+}
+
+.card-body{
+padding:25px;
+}
+
+.card h2{
+font-size:20px;
+margin-bottom:10px;
+color:#38bdf8;
+}
+
+.card ul{
+margin-bottom:15px;
+padding-left:18px;
+font-size:14px;
+line-height:1.8;
+}
+
+.card h3{
+display:inline-block;
+background:#38bdf8;
+color:white;
+padding:6px 14px;
+border-radius:20px;
+font-size:14px;
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+padding:100px 80px;
+background:#020617;
+text-align:center;
+}
+
+.testimonial h2{
+font-size:36px;
+margin-bottom:50px;
+color:#38bdf8;
+}
+
+.testimonial-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.testi-card{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+}
+
+.stars{
+color:gold;
+margin-bottom:10px;
+}
+
+/* BOOKING */
+
+.booking{
+padding:100px 20px;
+background:#020617;
+text-align:center;
+}
+
+.booking form{
+max-width:420px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.booking input,
+.booking select{
+padding:13px;
+border-radius:8px;
+border:none;
+background:#1e293b;
+color:white;
+}
+
+.booking button{
+background:#25D366;
+color:white;
+padding:14px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* MAP */
+
+.map{
+padding:100px 20px;
+background:#020617;
+text-align:center;
+}
+
+.map h2{
+font-size:36px;
+margin-bottom:40px;
+color:#38bdf8;
+}
+
+.map iframe{
+width:90%;
+height:450px;
+border-radius:15px;
+border:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* CONTACT */
+
+.contact{
+padding:100px 20px;
+text-align:center;
+}
+
+footer{
+background:#020617;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">BaliTrip</div>
+
+<ul class="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#packages">Packages</a></li>
+<li><a href="#testimonial">Testimonials</a></li>
+<li><a href="#map">Destinations Map</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<header class="hero" id="home">
+
+<video autoplay muted loop class="video-bg">
+<source src="video/bali.mp4.mp4" type="video/mp4">
+</video>
+
+<div class="hero-overlay"></div>
+
+<div>
+<h1>BALI DAY TRIP</h1>
+<p>Explore Bali With Amazing Destinations</p>
+<a href="#booking" class="btn">Book Now</a>
+</div>
+
+</header>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="about-container">
+
+<div class="about-text">
+
+<h2>About BaliTrip</h2>
+
+<p>BaliTrip provides the best tour packages to explore Bali.</p>
+
+<p>Professional drivers, comfortable vehicles, and complete itineraries.</p>
+
+</div>
+
+<div class="about-img">
+<img src="images/bali.jpg1.jpeg">
+</div>
+
+</div>
+
+</section>
+
+<!-- PACKAGES -->
+
+<section class="container" id="packages">
+
+<div class="card">
+<img src="images/ubud.jpg">
+<div class="card-body">
+<h2>UBUD DAY TRIP</h2>
+<ul>
+<li>Tegalalang Rice Terrace</li>
+<li>Jungle Swing</li>
+<li>Tirta Empul Temple</li>
+</ul>
+<h3>IDR 700K</h3>
+</div>
+</div>
+
+<div class="card">
+<img src="images/kintamani.jpg">
+<div class="card-body">
+<h2>KINTAMANI DAY TRIP</h2>
+<ul>
+<li>Breakfast Kintamani</li>
+<li>Besakih Temple</li>
+<li>Tukad Cepung Waterfall</li>
+</ul>
+<h3>IDR 750K</h3>
+</div>
+</div>
+
+<div class="card">
+<img src="images/bedugul.jpg">
+<div class="card-body">
+<h2>BEDUGUL DAY TRIP</h2>
+<ul>
+<li>Leke Leke Waterfall</li>
+<li>Ulun Danu Temple</li>
+<li>Jatiluwih Rice Terrace</li>
+</ul>
+<h3>IDR 800K</h3>
+</div>
+</div>
+
+<div class="card">
+<img src="images/lempuyang.jpg">
+<div class="card-body">
+<h2>LEMPUYANG DAY TRIP</h2>
+<ul>
+<li>Lempuyang Temple</li>
+<li>Tirta Gangga</li>
+<li>Virgin Beach</li>
+</ul>
+<h3>IDR 850K</h3>
+</div>
+</div>
+
+<div class="card">
+<img src="images/uluwatu.jpg">
+<div class="card-body">
+<h2>ULUWATU DAY TRIP</h2>
+<ul>
+<li>GWK Cultural Park</li>
+<li>Melasti Beach</li>
+<li>Uluwatu Temple</li>
+</ul>
+<h3>IDR 850K</h3>
+</div>
+</div>
+
+</section>
+
+<!-- TESTIMONIAL -->
+
+<section class="testimonial" id="testimonial">
+
+<h2>Traveler Testimonials</h2>
+
+<div class="testimonial-container">
+
+<div class="testi-card">
+<div class="stars">★★★★★</div>
+<p>Amazing trip and friendly driver!</p>
+<h4>— Sarah, Australia</h4>
+</div>
+
+<div class="testi-card">
+<div class="stars">★★★★★</div>
+<p>Best Bali experience ever.</p>
+<h4>— Michael, USA</h4>
+</div>
+
+<div class="testi-card">
+<div class="stars">★★★★★</div>
+<p>Very recommended tour service.</p>
+<h4>— Rina, Indonesia</h4>
+</div>
+
+</div>
+
+</section>
+
+<!-- BOOKING -->
+
+<section class="booking" id="booking">
+
+<h2>Booking Trip</h2>
+
+<form>
+
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="phone" placeholder="Phone Number" required>
+<input type="date" id="date" required>
+
+<select id="package">
+<option>Ubud Day Trip</option>
+<option>Kintamani Day Trip</option>
+<option>Bedugul Day Trip</option>
+<option>Lempuyang Day Trip</option>
+<option>Uluwatu Day Trip</option>
+</select>
+
+<button type="button" onclick="sendBooking()">Send Booking to WhatsApp</button>
+
+</form>
+
+</section>
+
+<!-- GOOGLE MAP -->
+
+<section class="map" id="map">
+
+<h2>Bali Destinations Map</h2>
+
+<iframe src="https://www.google.com/maps?q=Bali,Indonesia&output=embed"></iframe>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>📍 Bali, Indonesia</p>
+<p>📞 +62 877 6148 3450</p>
+<p>📧 balitrip@gmail.com</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 BaliTrip</p>
+
+</footer>
+
+<script>
+
+function sendBooking(){
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let date = document.getElementById("date").value;
+let paket = document.getElementById("package").value;
+
+let message = `Hello BaliTrip,%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Package: ${paket}%0A
+Date: ${date}`;
+
+let url = "https://wa.me/6287761483450?text=" + message;
+
+window.open(url,'_blank');
+
+}
+
+</script>
+
+</body>
+</html>
